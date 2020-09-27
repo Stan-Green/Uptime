@@ -1,6 +1,8 @@
 // uptime.cpp
 // Dipaly the uptime of the PC.
 // Written by: Stan Green 8/8/2020
+//This program ignores the concept of leap year, so the output will be inaccurate if the system stays up for more than a year which
+//includes a leap year. Since Windows computers do not typically stay up from over a year, this is not a big issue.
 
 #include <iostream>
 #include<string> 
