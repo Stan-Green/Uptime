@@ -1,8 +1,10 @@
 // uptime.cpp
 // Dipaly the uptime of the PC.
 // Written by: Stan Green 8/8/2020
-//This program ignores the concept of leap year, so the output will be inaccurate if the system stays up for more than a year which
-//includes a leap year. Since Windows computers do not typically stay up from over a year, this is not a big issue.
+
+//Same bacsic concept as uptime on Linux.
+
+// 4/20/2021 - Removed Year as it was wrong, due to leap year, and Winodows computers don't stay up for over a year. If it does it will just have days >365 (or 366)
 
 #include <iostream>
 #include<string> 
@@ -12,21 +14,18 @@
 int main()
 {
     ULONGLONG ll_milSec = GetTickCount64();
-    ULONGLONG YEAR = 31536000000;
     LONG DAY = 86400000;
     LONG HOUR = 3600000;
     LONG MINUTE = 60000;
     LONG SECOND = 1000;
 
-    std::string ls_years = "0";
-    std::string ls_days = "0";
+       std::string ls_days = "0";
     std::string ls_hours = "0";
     std::string ls_minutes = "0";
     std::string ls_seconds = "0";
     std::string ls_milseconds = "0";
 
 
-    LONG ll_years = 0;
     LONG ll_days = 0;
     LONG ll_hours = 0;
     LONG ll_minutes = 0;
@@ -41,13 +40,6 @@ int main()
 
     std::string ls_milSec = std::to_string(ll_milSec);
     std::cout << "Uptime in milliseconds: " << ls_milSec << "\n\n";
-
-    //ll_years = ll_milSec / YEAR;
-    //if (ll_years > 0)
-    //{
-    //    ll_milSec = ll_milSec - (ll_years * YEAR);
-    //    ls_years = std::to_string(ll_years);
-    //}
 
     ll_days = ll_milSec / DAY;
     if (ll_days > 0)
@@ -82,7 +74,6 @@ int main()
         ls_milseconds = std::to_string(ll_milSec);
     }
 
-      //std::cout << "*** Uptime ***\n" << "Years: " << ls_years << "\n" << "Days: " << ls_days << "\n" << "Hours: " << ls_hours << "\n" << "Minutes: " << ls_minutes << "\n" << "Seconds: " << ls_seconds << "\n" << "Milliseconds:  " << ls_milseconds << "\n";
-      std::cout << "*** Uptime ***\n" << "Days: " << ls_days << "\n" << "Hours: " << ls_hours << "\n" << "Minutes: " << ls_minutes << "\n" << "Seconds: " << ls_seconds << "\n" << "Milliseconds:  " << ls_milseconds << "\n";
+       std::cout << "*** Uptime ***\n" << "Days: " << ls_days << "\n" << "Hours: " << ls_hours << "\n" << "Minutes: " << ls_minutes << "\n" << "Seconds: " << ls_seconds << "\n" << "Milliseconds:  " << ls_milseconds << "\n";
  }
  
