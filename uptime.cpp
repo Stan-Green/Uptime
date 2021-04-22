@@ -42,12 +42,12 @@ int main()
     std::string ls_milSec = std::to_string(ll_milSec);
     std::cout << "Uptime in milliseconds: " << ls_milSec << "\n\n";
 
-    ll_years = ll_milSec / YEAR;
-    if (ll_years > 0)
-    {
-        ll_milSec = ll_milSec - (ll_years * YEAR);
-        ls_years = std::to_string(ll_years);
-    }
+    //ll_years = ll_milSec / YEAR;
+    //if (ll_years > 0)
+    //{
+    //    ll_milSec = ll_milSec - (ll_years * YEAR);
+    //    ls_years = std::to_string(ll_years);
+    //}
 
     ll_days = ll_milSec / DAY;
     if (ll_days > 0)
@@ -82,6 +82,7 @@ int main()
         ls_milseconds = std::to_string(ll_milSec);
     }
 
-      std::cout << "*** Uptime ***\n" << "Years: " << ls_years << "\n" << "Days: " << ls_days << "\n" << "Hours: " << ls_hours << "\n" << "Minutes: " << ls_minutes << "\n" << "Seconds: " << ls_seconds << "\n" << "Milliseconds:  " << ls_milseconds << "\n";
+      //std::cout << "*** Uptime ***\n" << "Years: " << ls_years << "\n" << "Days: " << ls_days << "\n" << "Hours: " << ls_hours << "\n" << "Minutes: " << ls_minutes << "\n" << "Seconds: " << ls_seconds << "\n" << "Milliseconds:  " << ls_milseconds << "\n";
+      std::cout << "*** Uptime ***\n" << "Days: " << ls_days << "\n" << "Hours: " << ls_hours << "\n" << "Minutes: " << ls_minutes << "\n" << "Seconds: " << ls_seconds << "\n" << "Milliseconds:  " << ls_milseconds << "\n";
  }
  
