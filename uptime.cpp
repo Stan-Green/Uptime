@@ -14,7 +14,7 @@
 int main()
 {
     ULONGLONG ll_milSec = GetTickCount64();
-    LONG DAY = 86400000;
+    ULONGLONG DAY = 86400000;
     LONG HOUR = 3600000;
     LONG MINUTE = 60000;
     LONG SECOND = 1000;
